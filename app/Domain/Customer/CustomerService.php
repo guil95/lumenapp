@@ -6,8 +6,12 @@ use App\Domain\Customer\Exception\CustomerNotFound;
 
 final class CustomerService
 {
-    private $dao;
+    private CustomerDAOInterface $dao;
 
+    /**
+     * CustomerService constructor.
+     * @param CustomerDAOInterface $dao
+     */
     public function __construct(CustomerDAOInterface $dao)
     {
         $this->dao = $dao;
@@ -25,7 +29,6 @@ final class CustomerService
             throw new CustomerNotFound('Clientes não encontrados');
         }
 
-        
         return $customers;
     }
 }

@@ -4,5 +4,5 @@ namespace App\Domain\Customer;
 
 interface CustomerDAOInterface
 {
-    public function findAll();
+    public function findAll(): array;
 }

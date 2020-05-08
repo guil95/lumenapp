@@ -10,7 +10,7 @@ class Customer implements CustomerDAOInterface
     /**
      * @return array
      */
-    public function findAll()
+    public function findAll(): array
     {
         return DB::table('customers')->get()->all();
     }
