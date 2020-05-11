@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Domain\Customer;
 
 use App\Domain\Customer\Exception\CustomerNotFound;
@@ -19,7 +21,7 @@ final class CustomerService
 
     /**
      * @return array
-     * @throws \Exception
+     * @throws CustomerNotFound
      */
     public function findAll(): array
     {
